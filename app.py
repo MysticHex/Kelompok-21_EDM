@@ -11,7 +11,7 @@ imputer_pend = joblib.load('imputer_pendidikan.joblib')
 
 job_data = pd.read_csv('job_data_for_streamlit.csv')
 st.set_page_config(page_title="Cariin")
-st.title('Prediksi Gaji dan Lowongan Pekerjaan')
+st.title('Cariin')
 
 kategori_options = le_kategori.classes_
 pendidikan_options = le_pendidikan.classes_
