@@ -10,7 +10,7 @@ imputer_umur = joblib.load('imputer_umur.joblib')
 imputer_pend = joblib.load('imputer_pendidikan.joblib')
 
 job_data = pd.read_csv('job_data_for_streamlit.csv')
-
+st.set_page_config(page_title="Cariin")
 st.title('Prediksi Gaji dan Lowongan Pekerjaan')
 
 kategori_options = le_kategori.classes_
