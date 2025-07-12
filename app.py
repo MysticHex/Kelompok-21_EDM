@@ -239,8 +239,8 @@ with tab1:
     
     col1, col2, col3 = st.columns(3)
     col1.metric("R² Score", f"{metrics.get('r2', 0):.4f}")
-    col2.metric("RMSE", f"Rp{metrics.get('rmse', 0):,.2f}")
-    col3.metric("MAE", f"Rp{metrics.get('mae', 0):,.2f}")
+    # col2.metric("RMSE", f"{metrics.get('rmse', 0):,.2f}")
+    # col3.metric("MAE", f"{metrics.get('mae', 0):,.2f}")
     
     st.write("""
     **Interpretasi Metrik:**
