@@ -95,8 +95,6 @@ st.title('Cariin')
 st.sidebar.header("📊 Akurasi Model")
 st.sidebar.subheader(f"Model Terbaik: {metrics.get('best_model', 'XGBoost')}")
 st.sidebar.metric("R² Score", f"{metrics.get('r2', 0):.4f}")
-st.sidebar.metric("RMSE", f"{metrics.get('rmse', 0):,.2f}")
-st.sidebar.metric("MAE", f"{metrics.get('mae', 0):,.2f}")
 st.sidebar.caption(f"Model diuji dengan {metrics.get('test_size', 0)} sampel data")
 
 # Main content
