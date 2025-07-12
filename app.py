@@ -90,7 +90,7 @@ def rekomendasi_lowongan(predicted_salary, df, role, n=5):
     return recommended[['Title', 'Posisi', 'Gaji', 'Link', 'Kualifikasi', 'Skill', 'Salary_Diff']]
 
 st.set_page_config(page_title="Prediksi Gaji & Rekomendasi Lowongan", layout="wide")
-st.title('🎯 Prediksi Gaji & Rekomendasi Lowongan Kerja')
+st.title('Cariin')
 
 st.sidebar.header("📊 Akurasi Model")
 st.sidebar.subheader(f"Model Terbaik: {metrics.get('best_model', 'XGBoost')}")
