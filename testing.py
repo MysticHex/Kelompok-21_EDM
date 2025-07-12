@@ -158,9 +158,7 @@ def fetch_jobstreet_jobs(max_pages=100, pagesize=32, out_csv="jobstreet_jobs_cle
             umur = extract_age(kualifikasi)
             pendidikan = extract_education(kualifikasi)
             skill = extract_skills(kualifikasi)
-            # Kategori: dicari dari gabungan Title dan Kualifikasi
             kategori_lowongan = assign_category(f"{title} {kualifikasi}", job_categories)
-            # Kolom Pekerjaan Lowongan diisi dengan hasil assign_category, bukan "Semua Lowongan"
             pekerjaan_lowongan = kategori_lowongan
             link = f"https://id.jobstreet.com/id/job/{job.get('id')}"
             writer.writerow([
@@ -171,4 +169,4 @@ def fetch_jobstreet_jobs(max_pages=100, pagesize=32, out_csv="jobstreet_jobs_cle
     print(f"[INFO] Saved {len(all_jobs)} cleaned jobs with category to {out_csv}")
 
 if __name__ == "__main__":
-    fetch_jobstreet_jobs(max_pages=16, pagesize=32, out_csv="jobstreet_jobs_cleaned_16.csv")
+    fetch_jobstreet_jobs(max_pages=100, pagesize=32, out_csv="jobstreet_jobs_cleaned_with_category.csv")
